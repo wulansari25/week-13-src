@@ -27,13 +27,21 @@ Answer :
 ### Soal 5
 1. Jelaskan perbedaan menggunakan listen dan await for 
 Answer: 
-Gunakan listen jika:
-Membutuhkan kontrol lebih (seperti pause/resume stream).
-Ingin menangani error atau selesai stream dengan callback terpisah.
+* Gunakan listen jika:
+ - Membutuhkan kontrol lebih (seperti pause/resume stream).
+ - Ingin menangani error atau selesai stream dengan callback terpisah.
 
-Gunakan await for jika Anda:
-Membutuhkan cara sederhana untuk membaca stream sampai selesai.
-Ingin menulis kode yang lebih bersih dan mudah dibaca.
+* Gunakan await for jika Anda:
+ - Membutuhkan cara sederhana untuk membaca stream sampai selesai.
+ - Ingin menulis kode yang lebih bersih dan mudah dibaca.
+
+### Soal 6
+1. Jelaskan maksud kode 8 dan 10 tersebut!
+Answer: 
+* Kode 8, kode ini menyiapkan stream untuk mendengarkan data yang masuk ke dalam numberStream. Ketika data baru diterima, lastNumber diperbarui dan tampilan UI direbuild agar memperlihatkan data terbaru.
+
+* Kode 10, kode ini bertanggung jawab untuk menghasilkan angka acak dan mengirimkannya ke dalam stream melalui numberStream. Angka yang dikirim ke stream kemudian akan diterima oleh listener (yang diinisialisasi pada langkah 8) dan ditampilkan di UI dengan memperbarui lastNumber.
+
 
 
 A new Flutter project.
