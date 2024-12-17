@@ -24,6 +24,16 @@ Answer :
 4. **`yield*`**  
    Keyword `yield*` digunakan untuk **meneruskan hasil stream** yang dibuat oleh `Stream.periodic`. Jadi, setiap hasil dari `Stream.periodic` akan dikirimkan ke luar fungsi generator, satu per satu, setiap detik.
 
+### Soal 5
+1. Jelaskan perbedaan menggunakan listen dan await for 
+Answer: 
+Gunakan listen jika:
+Membutuhkan kontrol lebih (seperti pause/resume stream).
+Ingin menangani error atau selesai stream dengan callback terpisah.
+
+Gunakan await for jika Anda:
+Membutuhkan cara sederhana untuk membaca stream sampai selesai.
+Ingin menulis kode yang lebih bersih dan mudah dibaca.
 
 
 A new Flutter project.
