@@ -42,7 +42,19 @@ Answer:
 
 * Kode 10, kode ini bertanggung jawab untuk menghasilkan angka acak dan mengirimkannya ke dalam stream melalui numberStream. Angka yang dikirim ke stream kemudian akan diterima oleh listener (yang diinisialisasi pada langkah 8) dan ditampilkan di UI dengan memperbarui lastNumber.
 
+### Soal 7
+1. Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+Answer: Hubungan Antara Langkah 13, 14, dan 15
+* Langkah 13: Fungsi addError() digunakan untuk mengirim error ke dalam stream.
+* Langkah 15: Fungsi addRandomNumber() sekarang diprogram untuk memanggil addError(), sehingga error dikirim ke stream.
+* Langkah 14: Listener pada stream mendengarkan data atau error:
+ - Jika data diterima, lastNumber diperbarui dengan nilai data.
+ - Jika error terjadi, callback .onError() dijalankan, dan lastNumber diatur ke -1 sebagai tanda bahwa terjadi error.
 
+* Kesimpulan Keseluruhan:
+Langkah 13: Menambahkan error secara manual ke stream.
+Langkah 14: Menangani data dan error dari stream. Data valid diperbarui ke state, sedangkan error mengatur lastNumber menjadi -1.
+Langkah 15: Memicu error dengan memanggil fungsi addError() dari langkah 13.
 
 A new Flutter project.
 

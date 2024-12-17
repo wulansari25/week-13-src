@@ -28,6 +28,10 @@ class ColorStream {
   class NumberStream {
     final StreamController<int> controller = StreamController<int>();
 
+    addError() {
+      controller.sink.addError('error');
+    }
+
     void addNumberToSink(int newNumber) {
       controller.sink.add(newNumber);
       close() {
